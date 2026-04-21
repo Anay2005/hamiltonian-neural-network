@@ -481,7 +481,7 @@ def test_force_curve(model, ax, N=5, k=5.0, mass_idx=2):
     ax.plot(displacements, f_pred_arr, "b-", lw=1.5, label="HNN Learned")
     ax.set_xlabel(f"Displacement $q_{{{mass_idx}}}$")
     ax.set_ylabel("Force")
-    ax.set_title("1 · Force vs Displacement\n(should be linear)")
+    ax.set_title("Force vs Displacement\n(should be linear)")
     ax.legend()
     ax.grid(True, alpha=0.3)
 
@@ -555,7 +555,7 @@ def test_energy_landscape(model, ax, N=5, m=1.0, k=5.0, mass_idx=2):
     plt.colorbar(im, ax=ax, label="|H_true − H_pred|")
     ax.set_xlabel(f"$q_{{{mass_idx}}}$")
     ax.set_ylabel(f"$p_{{{mass_idx}}}$")
-    ax.set_title("2 · Energy Landscape Error\n(darker = more accurate)")
+    ax.set_title("Energy Landscape Error\n(darker = more accurate)")
 
     return float(jnp.mean(err))
 
@@ -722,7 +722,7 @@ def test_frequencies(model, ax, N=5, m=1.0, k=5.0):
     ax.plot(freqs[mask], fft_pred[mask], "b-", lw=1.5, label="HNN")
     ax.set_xlabel("Frequency (Hz)")
     ax.set_ylabel("Normalised Amplitude")
-    ax.set_title("4 · Frequency Spectrum\n(peaks should align)")
+    ax.set_title("Frequency Spectrum\n(peaks should align)")
     ax.legend()
     ax.grid(True, alpha=0.3)
 
@@ -861,7 +861,7 @@ def test_generalization(model, ax, k=5.0):
     ax.axhline(0.5, color="r", ls="--", label="Threshold")
     ax.set_xlabel("System Size N")
     ax.set_ylabel("Mean Absolute Force Error")
-    ax.set_title("6 · Generalization vs System Size\n(trained on N=5)")
+    ax.set_title("Generalization vs System Size\n(trained on N=5)")
     ax.set_xticks(sizes)
     ax.legend()
     ax.grid(True, alpha=0.3, axis="y")
