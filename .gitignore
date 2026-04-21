@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+JAX_ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Model weights (large binary — see note below)
+# Uncomment the next line if you do NOT want to track weights in git:
+model_weights.eqx
+
+# Training data (large binary — can be regenerated)
+# Uncomment the next line if you do NOT want to track data in git:
+coupled_oscillator_data.npz
+
+# JAX compilation cache
+jax_cache/
+__jax_cache__/
+
+# Logs
+*.log

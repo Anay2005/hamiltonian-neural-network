@@ -1,0 +1,16 @@
+# Core ML Framework
+jax>=0.4.20
+jaxlib>=0.4.20
+
+# Neural Network Library (JAX-based)
+equinox>=0.11.0
+
+# ODE Solvers (JAX-based)
+diffrax>=0.5.0
+
+# Optimiser
+optax>=0.1.7
+
+# Data & Plotting
+numpy>=1.24.0
+matplotlib>=3.7.0
